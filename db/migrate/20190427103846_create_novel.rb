@@ -3,7 +3,7 @@
 class CreateNovel < ActiveRecord::Migration[5.2]
   def change
     create_table :novels do |t|
-      t.string :name, null: false
+      t.string :title, null: false
       t.integer :price
       t.string :book_size
       t.string :isbn, null: false
