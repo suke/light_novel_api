@@ -5,5 +5,7 @@ module V1
     version 'v1'
     format :json
     formatter :json, Grape::Formatter::ActiveModelSerializers
+
+    mount V1::Novels
   end
 end
