@@ -7,6 +7,7 @@ CSV.foreach('db/csv/novels.csv', headers: true) do |row|
     title: row['title'],
     book_size: row['book_size'],
     isbn: row['isbn'],
+    price: row['price'],
     release_date: row['release_date']
   )
 end
