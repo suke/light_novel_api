@@ -12,5 +12,9 @@
 
 class NovelSerializer < ActiveModel::Serializer
   attributes :id, :title, :book_size, :isbn, :price,
-             :release_date, :author_id, :illustrator_id
+             :image_url, :release_date, :author_id, :illustrator_id
+
+  def image_url
+    object.image.url
+  end
 end

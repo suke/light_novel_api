@@ -20,6 +20,7 @@ module V1
         optional :price, type: Integer
         optional :book_size, type: String
         optional :release_date, type: DateTime
+        optional :image, type: File
         optional :author_id, type: Integer
         optional :illustrator_id, type: Integer
       end
@@ -47,6 +48,7 @@ module V1
           optional :price, type: Integer
           optional :book_size, type: String
           optional :release_date, type: DateTime
+          optional :image, type: File
           optional :author_id, type: Integer
           optional :illustrator_id, type: Integer
         end

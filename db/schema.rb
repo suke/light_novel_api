@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 2019_04_27_120523) do
     t.integer "price"
     t.string "book_size"
     t.string "isbn", null: false
+    t.string "image"
     t.datetime "release_date"
     t.integer "author_id"
     t.integer "illustrator_id"
