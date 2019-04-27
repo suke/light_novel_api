@@ -19,6 +19,7 @@ gem 'dotenv-rails'
 gem 'puma', '~> 3.11'
 
 gem 'carrierwave'
+gem 'graphiql-rails'
 gem 'graphql'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
