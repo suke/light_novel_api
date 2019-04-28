@@ -21,6 +21,9 @@ gem 'puma', '~> 3.11'
 gem 'carrierwave'
 gem 'graphiql-rails'
 gem 'graphql'
+gem 'graphql-batch'
+
+gem 'kaminari'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'bootsnap', '>= 1.1.0', require: false
