@@ -25,4 +25,7 @@ class Novel < ApplicationRecord
                    length: { maximum: 255 }
 
   mount_uploader :image, NovelImageUploader
+  belongs_to :author
+  belongs_to :illustrator
+  belongs_to :publisher
 end
