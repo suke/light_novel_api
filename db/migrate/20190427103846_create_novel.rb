@@ -11,6 +11,7 @@ class CreateNovel < ActiveRecord::Migration[5.2]
       t.datetime :release_date
       t.integer :author_id
       t.integer :illustrator_id
+      t.integer :publisher_id
       t.timestamps
     end
   end

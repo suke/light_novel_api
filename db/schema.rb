@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 2019_04_27_120523) do
     t.datetime "release_date"
     t.integer "author_id"
     t.integer "illustrator_id"
+    t.integer "publisher_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
