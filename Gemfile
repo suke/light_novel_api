@@ -23,6 +23,9 @@ gem 'graphiql-rails'
 gem 'graphql'
 gem 'graphql-batch'
 
+gem 'search_object', '1.2.0'
+gem 'search_object_graphql', '0.1'
+
 gem 'kaminari'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
