@@ -17,6 +17,14 @@ module Types
       Novel.find(id)
     end
 
+    field :this_month_new_novels, [Types::Object::NovelType], null: true do
+      description 'Find a novel by ID'
+    end
+
+    def this_month_new_novels
+      Novel.where(release_date: Time.now.all_month)
+    end
+
     field :author, Types::Object::AuthorType, null: true do
       description 'Find a novel by ID'
       argument :id, ID, required: true
