@@ -1,10 +1,19 @@
 # frozen_string_literal: true
 
 module Types
-  class QueryType < Types::BaseObject
+  class QueryType < Types::Object::BaseObject
     # Add root-level fields here.
     # They will be entry points for queries on your schema.
-    field :novel, NovelType, null: true do
+    field :novels, [Types::Object::NovelType], null: true do
+      description 'Find a novels'
+      argument :filter, Types::InputObject::NovelFilters, required: true
+    end
+
+    def novels(filter:)
+      Novel.page(filter.page).per(filter.max_page_size)
+    end
+
+    field :novel, Types::Object::NovelType, null: true do
       description 'Find a novel by ID'
       argument :id, ID, required: true
     end
@@ -13,7 +22,7 @@ module Types
       Novel.find(id)
     end
 
-    field :author, AuthorType, null: true do
+    field :author, Types::Object::AuthorType, null: true do
       description 'Find a novel by ID'
       argument :id, ID, required: true
     end
@@ -22,7 +31,7 @@ module Types
       Author.find(id)
     end
 
-    field :illustrator, IllustratorType, null: true do
+    field :illustrator, Types::Object::IllustratorType, null: true do
       description 'Find a novel by ID'
       argument :id, ID, required: true
     end
@@ -31,7 +40,7 @@ module Types
       Illustrator.find(id)
     end
 
-    field :publisher, PublisherType, null: true do
+    field :publisher, Types::Object::PublisherType, null: true do
       description 'Find a novel by ID'
       argument :id, ID, required: true
     end
