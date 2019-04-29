@@ -2,9 +2,7 @@
 
 module Types
   class QueryType < Types::Object::BaseObject
-    # Add root-level fields here.
-    # They will be entry points for queries on your schema.
-    field :novels, [Types::Object::NovelType], function: Resolvers::NovelsSearch, null: true do
+    field :novels, Types::Object::NovelsConnection, function: Resolvers::NovelsSearch, null: true, max_page_size: 10 do
       description 'Find a novels'
     end
 

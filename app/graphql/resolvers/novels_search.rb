@@ -7,7 +7,7 @@ class Resolvers::NovelsSearch
 
   scope { Novel.all }
 
-  type types[Types::Object::NovelType]
+  type types[Types::Object::NovelsConnection]
 
   option :filter, type: Types::InputObject::NovelFilter, with: :apply_filter
 
@@ -18,7 +18,6 @@ class Resolvers::NovelsSearch
 
   def normalize_filters(value, branches = [])
     scope = Novel.all
-    scope = scope.page(value['page']).per(value['max_page_size'])
     scope = apply_title_filter(value[:title], scope) if value[:title]
     scope = apply_isbn_filter(value[:isbn], scope) if value[:isbn]
     scope = apply_illustrator_filter(value[:illustrator_id], scope) if value[:illustrator_id]
