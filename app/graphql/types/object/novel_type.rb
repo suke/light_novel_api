@@ -17,6 +17,21 @@ module Types
       def image_url
         object.image.url
       end
+
+      def author
+        Loaders::AssociationLoader.for(Novel, :author).load(object)
+        # Loaders::RecordLoader.for(Publisher).load(object.publisher_id)
+      end
+
+      def publisher
+        Loaders::AssociationLoader.for(Novel, :publisher).load(object)
+        # Loaders::RecordLoader.for(Publisher).load(object.publisher_id)
+      end
+
+      def illustrator
+        Loaders::AssociationLoader.for(Novel, :illustrator).load(object)
+        # Loaders::RecordLoader.for(Illustrator).load(object.illustrator_id)
+      end
     end
   end
 end
