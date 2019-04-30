@@ -34,8 +34,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'nokogiri'
 gem 'rack-cors', require: 'rack/cors'
 
-gem 'elasticsearch-model', github: 'elastic/elasticsearch-rails'
-gem 'elasticsearch-rails', github: 'elastic/elasticsearch-rails'
+gem 'elasticsearch-model', github: 'elastic/elasticsearch-rails', branch: '6.x'
+gem 'elasticsearch-rails', github: 'elastic/elasticsearch-rails', branch: '6.x'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
