@@ -12,6 +12,11 @@ module Types
       field :author, Types::Object::AuthorType, null: true
       field :illustrator, Types::Object::IllustratorType, null: true
       field :publisher, Types::Object::PublisherType, null: true
+      field :image_url, String, null: true
+
+      def image_url
+        object.image.url
+      end
     end
   end
 end
