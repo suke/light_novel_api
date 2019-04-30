@@ -2,7 +2,7 @@
 
 module Types
   class QueryType < Types::Object::BaseObject
-    field :novels, Types::Object::NovelsConnection, function: Resolvers::NovelsSearch, null: true, max_page_size: 10 do
+    field :novels, Types::Object::NovelsConnection, function: Resolvers::NovelsSearch, null: true, max_page_size: 50 do
       description 'Find a novels'
     end
 
@@ -16,7 +16,7 @@ module Types
     end
 
     field :this_month_new_novels, [Types::Object::NovelType], null: true do
-      description 'Find a novel by ID'
+      description 'Find a this month new novels'
     end
 
     def this_month_new_novels
@@ -24,7 +24,7 @@ module Types
     end
 
     field :author, Types::Object::AuthorType, null: true do
-      description 'Find a novel by ID'
+      description 'Find a  author　by ID'
       argument :id, ID, required: true
     end
 
@@ -33,7 +33,7 @@ module Types
     end
 
     field :illustrator, Types::Object::IllustratorType, null: true do
-      description 'Find a novel by ID'
+      description 'Find a illustrator by ID'
       argument :id, ID, required: true
     end
 
@@ -42,7 +42,7 @@ module Types
     end
 
     field :publisher, Types::Object::PublisherType, null: true do
-      description 'Find a novel by ID'
+      description 'Find a publisher by ID'
       argument :id, ID, required: true
     end
 
