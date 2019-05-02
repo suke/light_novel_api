@@ -1,0 +1,6 @@
+test:
+  host: 'localhost:9200'
+  prefix: 'test_light_novel'
+development:
+  host: 'localhost:9200'
+  prefix: 'dev_light_novel'
