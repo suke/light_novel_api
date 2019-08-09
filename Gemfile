@@ -16,7 +16,7 @@ gem 'mysql2', '>= 0.4.4', '< 0.6.0'
 # Use Puma as the app server
 gem 'config'
 gem 'dotenv-rails'
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 4.1'
 
 gem 'carrierwave'
 gem 'graphiql-rails'
