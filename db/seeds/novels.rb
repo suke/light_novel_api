@@ -17,5 +17,5 @@ CSV.foreach('db/csv/novels.csv', headers: true) do |row|
     illustrator: illustrator,
     publisher: publisher
   )
-  novel.update!(image: File.open(Rails.root.join("public/image/#{row['isbn']}.jpg")))
+  # novel.update!(image: File.open(Rails.root.join("public/image/#{row['isbn']}.jpg")))
 end
