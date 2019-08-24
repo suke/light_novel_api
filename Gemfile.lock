@@ -263,7 +263,7 @@ GEM
       rspec-support (~> 3.8.0)
     rspec-support (3.8.0)
     ruby_dep (1.5.0)
-    search_object (1.2.0)
+    search_object (1.2.2)
     search_object_graphql (0.1)
       graphql (~> 1.5)
       search_object (~> 1.2)
@@ -328,7 +328,7 @@ DEPENDENCIES
   rails (~> 5.2.1)
   rb-readline
   rspec-rails (~> 3.5)
-  search_object (= 1.2.0)
+  search_object (= 1.2.2)
   search_object_graphql (= 0.1)
   spring
   spring-watcher-listen (~> 2.0.0)
