@@ -24,7 +24,7 @@ gem 'graphql'
 gem 'graphql-batch'
 
 gem 'search_object', '1.2.2'
-gem 'search_object_graphql', '0.1'
+gem 'search_object_graphql', '0.2'
 
 gem 'kaminari'
 
