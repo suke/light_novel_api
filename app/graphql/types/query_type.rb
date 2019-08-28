@@ -23,6 +23,10 @@ module Types
       Novel.where(release_date: Time.now.all_month)
     end
 
+    field :authors, Types::Object::AuthorsConnection, function: Resolvers::AuthorsSearch, null: true, max_page_size: 50 do
+      description 'Find a authors'
+    end
+
     field :author, Types::Object::AuthorType, null: true do
       description 'Find a  author　by ID'
       argument :id, ID, required: true
