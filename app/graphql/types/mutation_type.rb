@@ -8,5 +8,7 @@ module Types
     def test_field
       'Hello World'
     end
+
+    field :create_novel, mutation: Mutations::CreateNovel
   end
 end
